@@ -4,6 +4,8 @@
 
 GitHub and AWS CLI authentication work. Deployment is blocked because IAM user `naigam-cli` is denied `amplify:ListApps`. Cost Explorer and Free Tier reads are also denied. A public URL and successful cloud deployment have not been verified.
 
+The first application supplied by the user is RoboAssist: https://main.d1zh2706tsevoy.amplifyapp.com/ . Its public homepage returned HTTP 200 during verification. AWS also denied `amplify:GetApp` for app ID `d1zh2706tsevoy`, so its console deployment status cannot be confirmed through this CLI user.
+
 ## Required account step
 
 An AWS administrator must grant this user Amplify deployment permissions. In the AWS console, open IAM → Users → naigam-cli → Add permissions. For this class deployment, the AWS managed `AdministratorAccess-Amplify` policy is one available option; it grants broad permissions, so the administrator should choose an appropriate scoped policy if required by the account. Do not paste access keys into chat or GitHub. Billing visibility separately requires `ce:GetCostAndUsage` and `freetier:GetFreeTierUsage` (and billing account access where applicable).

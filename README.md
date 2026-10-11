@@ -1,5 +1,9 @@
 # CareGuide
 
+## AWS Amplify deployment
+
+See [DEPLOYMENT_AMPLIFY.md](DEPLOYMENT_AMPLIFY.md) for deployment instructions and current account blockers. Run `npm run build:amplify` to package the React frontend and Express API for Amplify Hosting compute. Production API requests use the same origin. After `npm run build`, `npm start` serves the full app at http://localhost:3001. In Windows PowerShell, use `npm.cmd` if script execution policy blocks `npm`.
+
 ## Overview
 CareGuide is an AI-powered patient preparation assistant designed to help patients understand how to prepare for upcoming medical appointments, procedures, tests, or consultations. The application converts clinic instructions into organized, plain-language preparation guides with reminders, checklists, suggested questions, and safety messaging.
 
